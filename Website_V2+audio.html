@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dialogue Layout</title>
+  <link rel="stylesheet" href="Website_V2_2+audio.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="dialogue-box">
+    <div class="text-content">
+    <p class="alex" data-start="0.00" data-end="5.76"><strong>Alex:</strong> Hey Sam, good to see you! So, have you heard about the new café that opened up downtown?</p>
+    <p class="sam" data-start="5.76" data-end="10.48"><strong>Sam:</strong> Hey Alex, yeah, I heard about it. I’ve been meaning to check it out.</p>
+    <p class="alex" data-start="10.49" data-end="17.64"><strong>Alex:</strong> Great, we should go sometime. Anyway, speaking of new things, did you see that viral video of the cat playing piano?</p>
+    <p class="sam" data-start="17.64" data-end="22.14"><strong>Sam:</strong> Uh, no, I haven’t. I’m not really into watching cat&nbsp; videos.</p>
+    <p class="alex" data-start="22.14" data-end="29.59"><strong>Alex:</strong> Oh, you’re missing out! It’s hilarious. But speaking of missing out, have you tried the new sushi place that just opened?</p>
+    <p class="sam" data-start="29.59" data-end="33.35"><strong>Sam:</strong> Sushi? No, I haven’t had sushi in a while.</p>
+    <p class="alex" data-start="33.36" data-end="39.82"><strong>Alex:</strong> You should definitely try it. But speaking of trying new things, have you ever considered taking up salsa dancing?</p>
+    <p class="sam" data-start="39.82" data-end="44.28"><strong>Sam:</strong> Salsa dancing? Uh, no, I haven’t really thought about it.</p>
+    <p class="alex" data-start="44.28" data-end="52.21"><strong>Alex:</strong> It’s so much fun, you should give it a try sometime. Anyway, speaking of fun, have you heard about the upcoming beach party next weekend?</p>
+    <p class="sam" data-start="52.21" data-end="56.99"><strong>Sam:</strong> Beach party? No, I didn’t hear about it. Who’s hosting it?</p>
+    <p class="alex" data-start="56.99" data-end="64.81"><strong>Alex:</strong> Oh, just some friends of mine. It’s going to be epic. But speaking of epic, have you seen the new action movie that just came out?</p>
+    <p class="sam" data-start="64.81" data-end="68.85"><strong>Sam:</strong> Action movie? No, I haven’t been to the movies in a while.</p>
+    <p class="alex" data-start="68.86" data-end="75.12"><strong>Alex:</strong> You should definitely check it out. But speaking of checking things out, have you seen the new art exhibit at the museum?</p>
+    <p class="sam" data-start="75.12" data-end="79.14"><strong>Sam:</strong> Art exhibit? No, I haven’t been to the museum in ages.</p>
+    <p class="alex" data-start="79.14" data-end="85.98"><strong>Alex:</strong> You should go, it’s really cool. But speaking of cool, have you tried the new ice cream flavor at the shop down the street?</p>
+    <p class="sam" data-start="85.98" data-end="89.34"><strong>Sam:</strong> Ice cream? Uh, no, I haven’t.</p>
+    <p class="alex" data-start="89.34" data-end="95.65"><strong>Alex:</strong> You should try it, it’s delicious. But speaking of delicious, have you ever tried making homemade pizza?</p>
+    <p class="sam" data-start="95.65" data-end="97.80"><strong>Sam:</strong> Homemade pizza? Yeah, I’ve made it a few times before.</p>
+    <p class="alex" data-start="100.46" data-end="106.49"><strong>Alex:</strong> Nice! We should have a pizza-making night sometime. Anyway, I should probably get going.</p>
+    <p class="sam" data-start="106.49" data-end="111.49"><strong>Sam:</strong> Yeah, me too. It was... an interesting conversation, Alex.</p>
+    <p class="alex" data-start="111.49" data-end="114.73"><strong>Alex:</strong> Definitely. Catch you later, Sam!</p>
+  </div>
+</div>
+
+<div class="buttons">
+
+  <div class="up-buttons">
+    <button>Text</button>
+    <button>Syntax</button>
+  </div>
+
+  <div class="top-buttons">
+    <button>Adjective</button>
+    <button>Connector</button>
+    <button>Time</button>
+    <button>Question</button>
+    <button>Object</button>
+  </div>
+
+  <div class="bottom-buttons">
+    <button>Tape 1</button>
+    <button>Tape 2</button>
+    <button>Tape 3</button>
+  </div>
+</div>
+</div> 
+
+<script src="Website_V2+audio.js"></script>
+
+<!-- ✅ Place audio + UI above the script so they exist before JS runs -->
+<audio id="audio-player">
+  <source src="4- AIGenerate2-Hey_Sam__good_to_see.wav" type="audio">
+</audio>
+
+<div class="sound-bar" id="sound-bar" style="display: none;">
+  <button id="play-toggle" class="play-btn">►</button>
+  <span id="current-time">0:00</span>
+  <input type="range" id="progress-bar" value="0" min="0" step="1">
+  <span id="duration">2:05</span>
+</div>
+
+
+</body>
+</html>
