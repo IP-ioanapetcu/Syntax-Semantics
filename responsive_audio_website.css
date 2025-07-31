@@ -1,0 +1,302 @@
+
+@font-face {
+    font-family: 'ABCFavorit';
+    src: url('ABCFavoritEdu-Regular.woff2') format('woff2'),
+         url('ABCFavoritEdu-Medium.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ABCFavorit';
+    src: url('./ABCFavoritEdu-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    background-color: #2a2aff;
+    font-family: 'ABCFavorit', sans-serif;
+    font-size: 22px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0px;
+    padding-bottom: 60px; /* space for audio bar */
+}
+
+.dialogue-box {
+    background-color: #2a2aff;
+    padding: 20px;
+    width: 80vw;
+    height: 100vh;
+    overflow-y: scroll;
+    scrollbar-color: #2a2aff;
+    scrollbar-width: 20px;
+}
+
+.buttons {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 50vw;
+    height: 100vh;
+    background-color: #2a2aff;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.buttons button {
+    background-color: #c1c1c1;
+    width: 100%;
+    clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+    padding: 20px 100px;
+    font-size: 22px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-family: 'ABCFavorit', sans-serif;
+    font-weight: 500;
+    color: #2a2aff;
+    transition: background-color 0.3s;
+}
+
+.top-buttons,
+.up-buttons,
+.bottom-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.top-buttons button {
+    border-radius: 0;
+    padding: 18px 60px;
+}
+
+.bottom-buttons button {
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    border-radius: 0;
+}
+
+.up-buttons button {
+    clip-path: polygon(100% 0, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+    border-radius: 0;
+}
+
+.buttons button:hover {
+    background-color: #2a2aff;
+    color: #c1c1c1;
+}
+
+.sam, .alex {
+    background-color: #c1c1c1;
+    color: #2a2aff;
+    padding: 15px 20px;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90%;
+}
+
+.sam {
+    border-radius: 50px;
+}
+
+.alex {
+    border-radius: 10px;
+}
+
+.sam:not(:last-child),
+.alex:not(:last-child) {
+    margin-bottom: 0px;
+}
+
+.dialogue-box::-webkit-scrollbar {
+    width: 20px;
+}
+
+.dialogue-box::-webkit-scrollbar-track {
+    background: #c1c1c1;
+}
+
+.dialogue-box::-webkit-scrollbar-thumb {
+    background-color: #2a2aff;
+    border-radius: 10px;
+    border: 2px solid #c1c1c1;
+}
+
+.highlighted-default,
+.highlighted-blue,
+.highlighted-green,
+.highlighted-pink,
+.highlighted-orange {
+    padding: 6px 6px;
+    border-radius: 16px;
+    font-weight: 400;
+    display: inline-block;
+}
+
+.highlighted-blue {
+    background-color: #ff0000;
+    color: #ff0000;
+}
+
+.highlighted-green {
+    background-color: #3dc44e;
+    color: #3dc44e;
+}
+
+.highlighted-pink {
+    background-color: rgb(255, 99, 213);
+    color: rgb(255, 99, 213);
+}
+
+.highlighted-orange {
+    background-color: #ff8b00;
+    color: #ff8b00;
+}
+
+.highlighted-default {
+    background-color: #eeff00;
+    color: #eeff00;
+}
+
+body.syntax-mode .highlighted-blue,
+body.syntax-mode .highlighted-green,
+body.syntax-mode .highlighted-pink,
+body.syntax-mode .highlighted-orange,
+body.syntax-mode .highlighted-default {
+    background-color: #2a2aff !important;
+    color: #2a2aff !important;
+}
+
+.syntax-style-2 .text-content span[class^="highlighted-"] {
+    border-radius: 0px;
+    padding: 4px 12px;
+    font-size: 1.05em;
+}
+
+.syntax-style-1 .text-content span[class^="highlighted-"] {
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    padding: 4px 8px;
+    font-size: 1.15em;
+}
+
+.syntax-style-3 .text-content span[class^="highlighted-"] {
+    clip-path: polygon(0% 12%, 12% 12%, 12% 0%, 88% 0%, 88% 12%, 100% 12%, 100% 88%, 88% 88%, 88% 100%, 12% 100%, 12% 88%, 0% 88%);
+    padding: 6px 14px;
+    border-radius: 0;
+    font-size: 1.25em;
+}
+
+.highlighted-pink.pink-text,
+.highlighted-green.green-text,
+.highlighted-blue.blue-text,
+.highlighted-orange.orange-text,
+.highlighted-default.default-text {
+    color: #000000;
+}
+
+.sound-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2a2aff;
+    padding: 10px 10px;
+    border-radius: 20px;
+    width: 50%;
+    margin: 0px auto;
+    color: #c1c1c1;
+    font-family: 'ABCFavorit', sans-serif;
+}
+
+.sound-bar input[type="range"] {
+    flex-grow: 1;
+    margin: 0 10px;
+    appearance: none;
+    height: 6px;
+    background: #c1c1c1;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+}
+
+.sound-bar input[type="range"]::-webkit-slider-thumb,
+.sound-bar input[type="range"]::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #2a2aff;
+    border: 2px solid #c1c1c1;
+    cursor: pointer;
+}
+
+.play-btn {
+    background-color: transparent;
+    border: none;
+    color: #c1c1c1;
+    font-size: 24px;
+    cursor: pointer;
+    margin-right: 10px;
+    padding: 0;
+}
+
+.play-btn:hover {
+    color: #c1c1c1;
+}
+
+.highlighted-line {
+    background-color: rgb(0, 0, 0);
+    transition: background-color 0.3s ease;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .dialogue-box,
+    .buttons {
+        width: 100%;
+        height: auto;
+    }
+
+    .buttons {
+        padding: 10px;
+    }
+
+    .buttons button {
+        font-size: 18px;
+        padding: 12px;
+        flex: 1 1 45%;
+        min-width: 100px;
+    }
+
+    .sound-bar {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .sound-bar input[type="range"] {
+        width: 100%;
+    }
+}
